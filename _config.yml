@@ -20,7 +20,7 @@ permalink: /:title:output_ext
 # Site Author
 author:
   name             : "Jaseem"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile.jpg"
   bio              : "Programmer, wannabe renaissance man and all-around geek. I work as a developer and live in Bangalore, India"
   
 
