@@ -435,11 +435,17 @@ mark {
     background-color: #FFC336;
 }
 
+.highlight pre{
+    padding:25px;
+    padding-right:0px;
+    font-size:13.5px;
+    line-height: 21.5px;
+}
+
 code, tt {
     padding: 1px 3px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
-    white-space: pre-wrap;
     border: #E3EDF3 1px solid;
     background: #F7FAFB;
     border-radius: 2px;
@@ -462,9 +468,8 @@ pre {
 
 pre code, tt {
     font-size: inherit;
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap;
     background: transparent;
+    
     border: none;
     padding: 0;
 }
