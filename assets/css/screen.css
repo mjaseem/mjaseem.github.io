@@ -597,7 +597,6 @@ margin on the iframe, cause it breaks stuff. */
 
 .main-header .inner {
     width: 80%;
-    max-width: 530px;
 }
 
 .main-nav {
@@ -781,7 +780,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 5rem;
+    font-size: 2.5rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
@@ -790,7 +789,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .page-description {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.5em;
     font-weight: 400;
     font-family: "Merriweather", serif;
@@ -799,14 +798,14 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .no-cover.main-header {
-    min-height: 160px;
-    max-height: 25%;
-    margin-bottom: -25px;
+    height: 160px;
+    margin-bottom: -35px;
     background: #fff;
 }
 
 .no-cover .page-title a {
     color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 
 .no-cover .page-description {
@@ -1489,9 +1488,7 @@ body:not(.post-template) .post-title {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
-        min-height: 240px;
-        height: 60%;
-        padding: 15% 0;
+        height: 240px;
     }
     .scroll-down, .home-template .main-header:after {
         display: none;
@@ -1504,7 +1501,7 @@ body:not(.post-template) .post-title {
         padding: 4px 0;
     }
     .page-title {
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: -1px;
     }
     .page-description {
@@ -1583,8 +1580,7 @@ body:not(.post-template) .post-title {
         height: 30%;
     }
     .archive-template .main-header {
-        max-height: 20%;
-        min-height: 160px;
+        height: 160px;
         padding: 10% 0;
     }
     .main-nav {
@@ -1639,10 +1635,7 @@ body:not(.post-template) .post-title {
     }
     .post {
         width: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin: 2rem 8%;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }
@@ -1672,7 +1665,7 @@ body:not(.post-template) .post-title {
         font-size: 1.6rem;
     }
     h1, h2, h3, h4, h5, h6 {
-        margin: 0 0 0.3em 0;
+        margin: 0 0 0.7em 0;
     }
     h1 {
         font-size: 2.8rem;
