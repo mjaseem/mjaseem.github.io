@@ -1639,7 +1639,7 @@ body:not(.post-template) .post-title {
     }
     .post {
         width: auto;
-        margin: 2rem 8%;
+        margin: 2rem 4%;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }
@@ -1651,6 +1651,9 @@ body:not(.post-template) .post-title {
     }
     .post-template .post-date {
         display: inline-block;
+    }
+    .highlight pre{
+        padding: 10px;
     }
     hr {
         margin: 1.75em 0;
