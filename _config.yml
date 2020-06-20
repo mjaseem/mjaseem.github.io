@@ -1,5 +1,5 @@
-name: obvious in retrospect.
-title: obvious in retrospect.
+name: Obvious in retrospect
+title: Obvious in retrospect
 description:  personal blog of jaseem m
 meta_description: "personal blog of jaseem m about programming and time"
 title_separator: '–'
@@ -24,7 +24,7 @@ permalink: /:title:output_ext
 author:
   name             : "Jaseem"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "Programmer, wannabe renaissance man and all-around geek. I work as a developer and live in Bangalore, India"
+  bio              : "Programmer, wannabe renaissance man and all-around geek. I work as a software engineer and live in Luxembourg"
   
 
 
