@@ -62,11 +62,12 @@ The big players—Google, Facebook, etc.—make money by tracking users. They ar
 
 Some initiatives are already exploring this space. A quick search surfaced these:
 
-- **Blockchain-based**: Hyperledger Indy, [Sovrin](https://sovrin.org/)
+- **Blockchain-based**: Hyperledger Indy, [World ID](https://worldcoin.org/blog/world/intro-zero-knowledge-proofs-semaphore-application-world-id)
 - **Corporate research**: [IBM Identity Mixer (Idemix)](https://github.com/IBM/idemix), [Microsoft U-Prove](https://www.microsoft.com/en-us/research/project/u-prove/)
 - **Government-backed**: [EU Digital Identity Wallet (eIDAS 2.0)](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/About+the+initiative) 
 
 The last one is the only one I checked in any detail. It’s expected to roll out in the next few years. From the spec sheet, it looks like it checks [all](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/annexes/annex-2/annex-2-high-level-requirements/#a2311-topic-11---pseudonyms:~:text=for%20Topic%20G.-,ZKP_04,-A%20ZKP%20scheme) [the](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/annexes/annex-2/annex-2-high-level-requirements/#a2311-topic-11---pseudonyms:~:text=Requirement%20specification-,PA_01,-A%20Wallet%20Unit) [boxes](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/annexes/annex-2/annex-2-high-level-requirements/#a2311-topic-11---pseudonyms:~:text=Requirement%20specification-,PA_10,-A%20Relying%20Party). A key challenge now is how it will be integrated into the wider internet ecosystem.
 
 I hope some of these technologies gain traction—and maybe even get baked into browsers, proving humanness quietly in the background.  
+
 A bot-free internet? *That* would be something to see.
