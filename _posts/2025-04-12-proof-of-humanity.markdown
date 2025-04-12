@@ -49,7 +49,7 @@ Broadly it works like this:
 
 **Certificate generation**: An issuer uses a secret key to generate a digital certificate tied to your verified identity. You store this certificate on your device in a digital wallet.  
   
-**Signup**: When you register on a site, or visit it for the first time, you use your certificate and the site’s key (aka context id) to generate a pseudonym that’s unique to that site. The same certificate will produce a different pseudonym for each site.  
+**Signup**: When you register on a site, or visit it for the first time, you use your certificate and the site’s key (aka context id) to generate a pseudonym that’s unique to that site. For the website, this is your identity. The same certificate will produce a different pseudonym for each site and for a site—more precisely for a context id—a certificate always produces the same pseudonym. 
   
 **Login**: When you visit the site again, you prove you're the same person behind the pseudonym—without revealing your identity or the certificate itself—by performing a mathematical operation that only someone holding the certificate could complete.  
   
