@@ -21,22 +21,29 @@ We need more reliable methods to prove personhood. The next step after captchas 
 
 Here's an idea: what if we could use credentials from in-person verifications? Could governments and banks—who do in-person verification anyway—vouch for you? But there would be privacy concerns there too. I don't want my banker to know what websites I use. But maybe there's a way to do this without the privacy traps.
 
-Here's what we’d need to make this work:
+Here's what we'd need to make this work: 
 
-1. **Issuers** (a trusted entity, eg. government, bank etc): issue digital certificates after in-person or document verification
-2. **Provers** (you, the user): enabled to prove you hold a certificate without revealing your identity
-3. **Verifiers** (websites): enabled to verify your identity without tracking you across sites. We don't want Tumblr and the government to work together to figure out that mild-mannered accountant Bob from HR is the one browsing furry porn
-4. **Sybil resistance**: prevent a single certificate from spawning multiple accounts. Otherwise, we're back to the bot problem. This property is aptly named after a [character with multiple personality disorder](https://en.wikipedia.org/wiki/Sybil_attack).
+### The roles
+**Issuers** – Trusted entities (like governments or banks) that perform in-person or document verification, then issue a digital certificate to the user.
 
-The verifiers shouldn't have to talk to the issuer since the certificate sits on the user's device and it contains everything needed to prove their personhood. 
+**Provers** – You, the user. You hold this certificate on your device and use it to prove you're a real person—without revealing who you are.
 
-Is this possible? It turns out it is, with "[zero knowledge proofs](https://chain.link/education/zero-knowledge-proof-zkp)". While ZKP is not widely used, it seem getting popular in blockchain and decentralization circles. Identify verification is one of its many use cases.
+**Verifiers** – Websites that accept these proofs and verify your personhood, without needing to contact the issuer.
+
+### The properties
+**Unlinkability** – You present a different identity to each website, and those identities can’t be correlated with each other or with your real identity. We don’t want Tumblr and the government teaming up to unmask mild-mannered Bob from HR as the guy browsing furry porn.
+
+**Sybil resistance** – A single certificate should only allow one account per site. Otherwise, we're back to the bot problem. Apty enough, this property is named after a [character with multiple personality disorder](https://en.wikipedia.org/wiki/Sybil_attack).
+
+The magic here is that verifiers never need to contact issuers. The certificate lives on your device and contains everything needed to prove your personhood—privately.
+
+Is this all possible? It turns out it is, with "[zero knowledge proofs](https://chain.link/education/zero-knowledge-proof-zkp)". While ZKP is not widely used, it has seen adoption in blockchain and decentralization circles. Identity verification is one of its many use cases.
 
 Similar to public key cryptography, it works because of the special properties of certain mathematical operations.
 
 ## How does this work?
 
-Honestly, I don’t know the deep math yet—at least not enough to confidently explain it. But I plan to dive in. For now, [this article](https://blog.identity.foundation/cryptographic-pseudonyms) might help.
+Honestly, I don’t know the deep math yet—at least not enough to confidently explain it. For now, [this article](https://blog.identity.foundation/cryptographic-pseudonyms) might help.
 
 Broadly it works like this:
 
@@ -44,9 +51,8 @@ Broadly it works like this:
   
 **Signup**: When you register on a site, or visit it for the first time, you use your certificate and the site’s key (aka context id) to generate a pseudonym that’s unique to that site. The same certificate will produce a different pseudonym for each site.  
   
-**Login**: You prove you're the same person behind the pseudonym—without revealing your identity or the certificate itself—by performing a mathematical proof that only someone holding the certificate could complete.  
+**Login**: When you visit the site again, you prove you're the same person behind the pseudonym—without revealing your identity or the certificate itself—by performing a mathematical operation that only someone holding the certificate could complete.  
   
-The site knows you’re a real person, but not who you are. And it can’t link your activity across other sites.
 
 The math ensures that the real identity cannot be derived from a pseudonym or set of pseudonyms. Since different websites get different pseudonyms for the same user, they cannot correlate their activity with this.
 
